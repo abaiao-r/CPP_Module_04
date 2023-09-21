@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 15:39:55 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/09/21 22:26:19 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/09/21 22:36:14 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Dog::Dog(void)
 Dog::Dog(Dog const &src)
 {
     *this = src;
-    this->brain = new Brain();
+    this->brain = new Brain(*(src.brain));
     std::cout << BLUE << "Dog Copy constructor called" << RESET 
         << std::endl;
 }

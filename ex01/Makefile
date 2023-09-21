@@ -6,7 +6,7 @@
 #    By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/21 15:08:37 by abaiao-r          #+#    #+#              #
-#    Updated: 2023/09/21 20:09:59 by abaiao-r         ###   ########.fr        #
+#    Updated: 2023/09/21 22:42:35 by abaiao-r         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,8 @@ SRCS =  $(SRCDIR)/main.cpp \
         $(SRCDIR)/Dog.cpp \
         $(SRCDIR)/Cat.cpp \
         $(SRCDIR)/WrongAnimal.cpp \
-        $(SRCDIR)/WrongCat.cpp
+        $(SRCDIR)/WrongCat.cpp \
+		$(SRCDIR)/Brain.cpp
 		
 OBJS = 	$(SRCS:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o)
 

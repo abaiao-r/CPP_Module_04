@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 20:19:11 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/09/21 20:50:11 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/09/21 22:35:55 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ Brain::Brain()
 
 Brain::Brain(Brain const &src)
 {
+    *this = src;
     std::cout << BOLDBLUE << "Brain copy constructor called" << RESET 
         << std::endl;
-    *this = src;
 }
 
 Brain::~Brain()
