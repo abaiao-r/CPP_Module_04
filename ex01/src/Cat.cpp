@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 15:44:55 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/09/21 21:15:57 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/09/21 22:19:38 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ Cat &Cat::operator=(Cat const &src)
     {
         this->type = src.type;
         *(this->brain) = *(src.brain);
-
     }
     return (*this);
 }
