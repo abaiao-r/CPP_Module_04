@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 15:39:55 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/09/21 19:58:41 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/09/23 13:24:20 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ Dog::Dog(void)
         << std::endl;
 }
 
-Dog::Dog(Dog const &src)
+Dog::Dog(Dog const &src) : Animal(src)
 {
+    *this = src;
     std::cout << BLUE << "Dog Copy constructor called" << RESET 
         << std::endl;
-    *this = src;
 }
 
 Dog::~Dog(void)

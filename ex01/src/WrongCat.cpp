@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 15:53:13 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/09/21 19:59:01 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/09/23 13:23:41 by andrefranci      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ WrongCat::WrongCat(void)
         << std::endl;
 }
 
-WrongCat::WrongCat(WrongCat const &src)
+WrongCat::WrongCat(WrongCat const &src) : WrongAnimal(src)
 {
     std::cout << ORANGE << "WrongCat Copy constructor called" << RESET 
         << std::endl;
