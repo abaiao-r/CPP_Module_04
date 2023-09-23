@@ -6,7 +6,7 @@
 #    By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/21 15:08:37 by abaiao-r          #+#    #+#              #
-#    Updated: 2023/09/23 18:11:20 by abaiao-r         ###   ########.fr        #
+#    Updated: 2023/09/23 20:11:04 by abaiao-r         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,12 +21,7 @@ OBJDIR = objs
 # Source Files
 
 SRCS =  $(SRCDIR)/main.cpp \
-        $(SRCDIR)/Animal.cpp \
-        $(SRCDIR)/Dog.cpp \
-        $(SRCDIR)/Cat.cpp \
-        $(SRCDIR)/WrongAnimal.cpp \
-        $(SRCDIR)/WrongCat.cpp \
-		$(SRCDIR)/Brain.cpp
+
 		
 OBJS = 	$(SRCS:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o)
 

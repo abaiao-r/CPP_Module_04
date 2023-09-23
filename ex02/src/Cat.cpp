@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 15:44:55 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/09/23 18:05:48 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/09/23 19:11:04 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Cat::Cat(void)
         << std::endl;
 }
 
-Cat::Cat(Cat const &src) : Animal(src)
+Cat::Cat(Cat const &src) : AAnimal(src)
 {
     this->brain = NULL;
     *this = src;

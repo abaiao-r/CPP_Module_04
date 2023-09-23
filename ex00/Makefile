@@ -6,7 +6,7 @@
 #    By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/21 15:08:37 by abaiao-r          #+#    #+#              #
-#    Updated: 2023/09/21 18:36:16 by abaiao-r         ###   ########.fr        #
+#    Updated: 2023/09/23 18:34:15 by abaiao-r         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,7 @@ re:		fclean all
 test: 	all
 		./$(NAME)
 
-valgrind: all
+valgrind: fclean all
 		valgrind --leak-check=full --show-leak-kinds=all ./$(NAME)
 
 $(NAME): 	$(OBJS)

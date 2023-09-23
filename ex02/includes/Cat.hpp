@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/21 15:35:52 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/09/23 19:07:50 by abaiao-r         ###   ########.fr       */
+/*   Created: 2023/09/21 15:43:19 by abaiao-r          #+#    #+#             */
+/*   Updated: 2023/09/23 19:08:00 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef CAT_HPP
+# define CAT_HPP
 
-# include "../includes/Animal.hpp"
+# include "../includes/AAnimal.hpp"
+# include "../includes/Brain.hpp"
 
-class Dog : public Animal
+class Cat: public AAnimal
 {
+    private:
+        Brain *brain;
     public:
-        Dog(void);
-        Dog(Dog const &src);
-        virtual ~Dog(void);
+        Cat(void);
+        Cat(Cat const &src);
+        virtual ~Cat(void);
 
-        Dog &operator=(Dog const &src);
+        Cat &operator=(Cat const &src);
 
-        virtual void makeSound(void) const;        
+        virtual void makeSound(void) const;
+        // pointer to brain
+        Brain *getBrain(void) const;      
 };
 
 #endif

@@ -6,7 +6,7 @@
 #    By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/21 15:08:37 by abaiao-r          #+#    #+#              #
-#    Updated: 2023/09/23 18:11:20 by abaiao-r         ###   ########.fr        #
+#    Updated: 2023/09/23 19:10:28 by abaiao-r         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ OBJDIR = objs
 # Source Files
 
 SRCS =  $(SRCDIR)/main.cpp \
-        $(SRCDIR)/Animal.cpp \
+        $(SRCDIR)/AAnimal.cpp \
         $(SRCDIR)/Dog.cpp \
         $(SRCDIR)/Cat.cpp \
         $(SRCDIR)/WrongAnimal.cpp \
@@ -31,7 +31,7 @@ SRCS =  $(SRCDIR)/main.cpp \
 OBJS = 	$(SRCS:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o)
 
 # Targets
-NAME = I_do_not_want_to_set_the_world_on_fire
+NAME = Abstract_class
 
 all: 	$(NAME)
 

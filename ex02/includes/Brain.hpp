@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/21 15:35:52 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/09/23 19:07:50 by abaiao-r         ###   ########.fr       */
+/*   Created: 2023/09/21 20:11:34 by abaiao-r          #+#    #+#             */
+/*   Updated: 2023/09/23 18:56:18 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef BRAIN_HPP
+#define BRAIN_HPP
 
-# include "../includes/Animal.hpp"
+#include "../includes/colours.hpp"
+#include "../includes/AAnimal.hpp"
+#include <iostream>
+#include <string>
 
-class Dog : public Animal
+class Brain
 {
+    private:
+        std::string ideas[100];
     public:
-        Dog(void);
-        Dog(Dog const &src);
-        virtual ~Dog(void);
+        Brain();
+        Brain(Brain const &src);
+        ~Brain();
 
-        Dog &operator=(Dog const &src);
+        Brain &operator=(Brain const &rhs);
 
-        virtual void makeSound(void) const;        
+        std::string getIdeas(int i) const;
+        void setIdeas(int i, std::string idea);
 };
 
 #endif
