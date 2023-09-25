@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   colours.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 15:20:30 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/09/25 01:10:20 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/09/25 13:29:41 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef COLOURS_HPP
 # define COLOURS_HPP
 
-# include "includes.hpp"
 
 # define RESET "\033[0m"
 # define RED "\033[31m"

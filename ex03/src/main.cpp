@@ -3,14 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 15:29:12 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/09/25 01:29:22 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/09/25 15:56:32 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/includes.hpp"
+#include "../includes/AMateria.hpp"
+#include "../includes/ICharacter.hpp"
+#include "../includes/IMateriaSource.hpp"
+#include "../includes/MateriaSource.hpp"
+#include "../includes/Character.hpp"
+#include "../includes/Ice.hpp"
+#include "../includes/Cure.hpp"
+
 
 int main()
 {

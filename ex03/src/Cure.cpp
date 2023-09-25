@@ -3,27 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 16:47:51 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/09/25 00:58:07 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/09/25 17:42:37 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Cure.hpp"
 
 /* Default Constructor */
-Cure::Cure()
+Cure::Cure() : AMateria("cure")
 {
-    this->_type = "cure";
     std::cout << BOLDYELLOW << "Cure Default " << YELLOW 
         << "constructor called" << RESET << std::endl;
 }
 
 /* Parameter Constructor */
-Cure::Cure(std::string const &type)
+Cure::Cure(std::string const &type) : AMateria(type)
 {
-    this->_type = type;
     std::cout << BOLDYELLOW << "Cure Parameter " << YELLOW 
         << "constructor called" << RESET << std::endl;
 }
@@ -56,7 +54,7 @@ Cure &Cure::operator=(Cure const &src)
 /* clone:  this function returns a new instance of the current class */
 AMateria* Cure::clone() const
 {
-    return (new Cure());
+    return (new Cure(*this));
 }
 
 /* use: this function prints a message */

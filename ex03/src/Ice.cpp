@@ -3,27 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 16:30:29 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/09/25 00:57:51 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/09/25 17:42:54 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Ice.hpp"
 
 /* Default Constructor */
-Ice::Ice()
+Ice::Ice() : AMateria("ice")
 {
-    this->_type = "ice";
     std::cout << BOLDBLUE << "Ice Default " << BLUE 
         << "constructor called" << RESET << std::endl;
 }
 
-/* Constructor */
-Ice::Ice(std::string const &type)
+/* Parameter Constructor */
+Ice::Ice(std::string const &type) : AMateria(type)
 {
-    this->_type = type;
     std::cout << BOLDBLUE << "Ice " << BLUE 
         << "constructor called" << RESET << std::endl;
 }
@@ -56,7 +54,7 @@ Ice &Ice::operator=(Ice const &src)
 /* clone:  this function returns a new instance of the current class */
 AMateria* Ice::clone() const
 {
-    return (new Ice());
+    return (new Ice(*this));
 }
 
 /* use:  this function use the materia on the target */

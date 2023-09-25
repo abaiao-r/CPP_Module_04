@@ -3,17 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 16:27:51 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/09/25 01:10:32 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/09/25 16:28:33 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ICE_HPP
 # define ICE_HPP
 
-# include "includes.hpp"
+# include   <iostream>
+# include   <string>
+# include   "AMateria.hpp"
+# include   "ICharacter.hpp"
+# include   "colours.hpp"
+
 
 class Ice : public AMateria
 {
@@ -24,9 +29,11 @@ class Ice : public AMateria
         Ice(std::string const &type);
         Ice(Ice const &copy);
         virtual ~Ice();
+
         Ice &operator=(Ice const &src);
-        virtual AMateria* clone() const;
-        virtual void use(ICharacter& target);
+        
+        AMateria* clone() const;
+        void use(ICharacter& target);
 };
 
 #endif

@@ -3,17 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 23:31:54 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/09/25 01:30:21 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/09/25 16:28:39 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHARACTER_HPP
 # define CHARACTER_HPP
 
-# include "includes.hpp"
+# include <iostream>
+# include <string>
+# include "ICharacter.hpp"
+# include "AMateria.hpp"
+# include "colours.hpp"
 
 class Character : public ICharacter
 {
@@ -25,6 +29,7 @@ class Character : public ICharacter
         Character(std::string name);
         Character(Character const &copy);
         virtual ~Character();
+        
         Character &operator=(Character const &src);
         
         std::string const & getName() const;

@@ -3,17 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 16:45:52 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/09/25 01:10:26 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/09/25 16:28:46 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CURE_HPP
 # define CURE_HPP
 
-# include "includes.hpp"
+# include   <iostream>
+# include   <string>
+# include   "AMateria.hpp"
+# include   "ICharacter.hpp"
+# include   "colours.hpp"
+
 
 class Cure : public AMateria
 {
@@ -24,7 +29,9 @@ class Cure : public AMateria
         Cure(std::string const &type);
         Cure(Cure const &copy);
         virtual ~Cure();
+
         Cure &operator=(Cure const &src);
+        
         virtual AMateria* clone() const;
         virtual void use(ICharacter& target);
 };

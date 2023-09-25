@@ -3,17 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 23:28:30 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/09/25 01:10:53 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/09/25 13:33:22 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MATERIASOURCE_HPP
 # define MATERIASOURCE_HPP
 
-# include "includes.hpp"
+# include   <iostream>
+# include   <string>
+# include   "AMateria.hpp"
+# include   "ICharacter.hpp"
+# include   "IMateriaSource.hpp"
+# include   "colours.hpp"
 
 class MateriaSource : public IMateriaSource
 {

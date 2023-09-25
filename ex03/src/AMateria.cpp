@@ -3,27 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+        */
+/*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 15:38:25 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/09/25 00:37:27 by andrefranci      ###   ########.fr       */
+/*   Updated: 2023/09/25 16:05:51 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/AMateria.hpp"
 
 /* Default Constructor */
-AMateria::AMateria()
+AMateria::AMateria() : _type("default")
 {
-    this->_type = "default";
     std::cout << BOLDORANGE << "AMateria Default " << ORANGE
         << "constructor called" << RESET << std::endl;
 }
 
 /* Parameter Constructor */
-AMateria::AMateria(std::string const &type)
+AMateria::AMateria(std::string const &type) : _type(type)
 {
-    this->_type = type;
     std::cout << BOLDORANGE << "AMateria Parameter " << ORANGE 
         << "constructor called" << RESET << std::endl;
 }
