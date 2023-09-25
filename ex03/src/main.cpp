@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 15:29:12 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/09/25 19:37:32 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/09/25 19:47:43 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,21 +22,21 @@
 int main()
 {
     std::cout << "..........TEST 0: ABSTRACT CLASSES........" << std::endl;
-        /* This code will  compile since AMateria is an abstract class
-         * and cannot be iantiated.
-         * AMateria materia; Error: cannot declare variable 'materia' to be of
-         * abstract type 'AMateria' */
-        //AMateria materia;
-        /* This code will  compile since ICharacter is an abstract class
-         * and cannot be iantiated.
-         * ICharacter character; Error: cannot declare variable 'character' to be of
-         * abstract type 'ICharacter' */
-        //ICharacter character;
-        /* This code will  compile since IMateriaSource is an abstract class
-         * and cannot be iantiated.
-         * IMateriaSource materiaSource; Error: cannot declare variable 'materiaSource' to be of
-         * abstract type 'IMateriaSource' */
-        //IMateriaSource materiaSource;
+    /* This code will  compile since AMateria is an abstract class
+        * and cannot be iantiated.
+        * AMateria materia; Error: cannot declare variable 'materia' to be of
+        * abstract type 'AMateria' */
+    //AMateria materia;
+    /* This code will  compile since ICharacter is an abstract class
+        * and cannot be iantiated.
+        * ICharacter character; Error: cannot declare variable 'character' to be of
+        * abstract type 'ICharacter' */
+    //ICharacter character;
+    /* This code will  compile since IMateriaSource is an abstract class
+        * and cannot be iantiated.
+        * IMateriaSource materiaSource; Error: cannot declare variable 'materiaSource' to be of
+        * abstract type 'IMateriaSource' */
+    //IMateriaSource materiaSource;
     std::cout << "...............TEST 1: GIVEN TEST.............." << std::endl;
     IMateriaSource* src = new MateriaSource();
     src->learnMateria(new Ice());
@@ -54,7 +54,7 @@ int main()
     delete me;
     delete src;
 
-    std::cout << std::endl << " Tes2 2: test 5 equiped materias" << std::endl;
+    std::cout << std::endl << " Test 2: test 5 equiped materias" << std::endl;
     IMateriaSource* src2 = new MateriaSource();
     src2->learnMateria(new Ice());
     src2->learnMateria(new Ice());
