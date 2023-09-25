@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 16:03:04 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/09/25 17:42:16 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/09/25 18:44:47 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,12 @@ void Character::equip(AMateria* m)
 {
     int i;
 
+    if (!m)
+    {
+        std::cout << BOLDRED << "Error: Not equiped because of invalid materia" 
+            << RESET << std::endl;
+        return ;
+    }
     i = 0;
     while (i < 4)
     {
@@ -106,8 +112,16 @@ void Character::equip(AMateria* m)
                 << "slot " << i << std::endl;
             return ;
         }
+        else if (this->_materia[i] == m)
+        {
+            std::cout << BOLDRED << "Error: Not equiped because materia already " 
+                << "equiped" << RESET << std::endl;
+            delete m;
+            return ;
+        }
         i++;
     }
+
 }
 
 /* unequip: Unequip a materia from the Character */
@@ -117,7 +131,8 @@ void Character::unequip(int idx)
         || this->_materia[idx] == NULL || std::isdigit(idx) == 1 
         || ft_count_digits(idx) > 1)
     {
-        std::cout << BOLDRED << "Error: Invalid idx" << RESET << std::endl;
+        std::cout << BOLDRED << "Error:  Not unequiped because of invalid idx" 
+            << RESET << std::endl;
         return ;
     }
     this->_materia[idx] = NULL;

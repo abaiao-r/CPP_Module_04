@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 23:21:50 by andrefranci       #+#    #+#             */
-/*   Updated: 2023/09/25 17:43:08 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/09/25 19:41:40 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,9 +64,10 @@ void MateriaSource::learnMateria(AMateria *m)
         if (!this->_materia[i])
         {
             this->_materia[i] = m;
-            break;
+            return ;
         }
     }
+    delete m;
 }
 
 AMateria *MateriaSource::createMateria(std::string const &type)
