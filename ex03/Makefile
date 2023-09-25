@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+         #
+#    By: andrefrancisco <andrefrancisco@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/21 15:08:37 by abaiao-r          #+#    #+#              #
-#    Updated: 2023/09/23 20:11:04 by abaiao-r         ###   ########.fr        #
+#    Updated: 2023/09/25 01:24:57 by andrefranci      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Compiler settings
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g #-fsanitize=address
+CXXFLAGS = -Wall -Wextra -Werror -Wshadow -std=c++98 -g #-fsanitize=address
 
 # Directories
 SRCDIR = src
@@ -21,12 +21,17 @@ OBJDIR = objs
 # Source Files
 
 SRCS =  $(SRCDIR)/main.cpp \
-
+		$(SRCDIR)/AMateria.cpp \
+		$(SRCDIR)/Ice.cpp \
+		$(SRCDIR)/Cure.cpp \
+		$(SRCDIR)/Character.cpp \
+		$(SRCDIR)/MateriaSource.cpp \
+		$(SRCDIR)/utils.cpp
 		
 OBJS = 	$(SRCS:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o)
 
 # Targets
-NAME = I_do_not_want_to_set_the_world_on_fire
+NAME = Interface_and_recap
 
 all: 	$(NAME)
 
