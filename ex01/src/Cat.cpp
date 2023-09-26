@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 15:44:55 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/09/23 18:05:48 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/09/26 16:44:06 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 Cat::Cat(void)
 {
     this->type = "Cat";
-    this->brain = new Brain();
     std::cout << BLUE << "Cat Default constructor called" << RESET 
         << std::endl;
+    this->brain = new Brain();
 }
 
 Cat::Cat(Cat const &src) : Animal(src)
 {
-    this->brain = NULL;
-    *this = src;
     std::cout << BLUE << "Cat Copy constructor called" << RESET 
         << std::endl;
+    this->brain = NULL;
+    *this = src;
 }
 
 Cat::~Cat(void)
