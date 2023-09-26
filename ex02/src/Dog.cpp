@@ -6,7 +6,7 @@
 /*   By: abaiao-r <abaiao-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 15:39:55 by abaiao-r          #+#    #+#             */
-/*   Updated: 2023/09/23 19:10:39 by abaiao-r         ###   ########.fr       */
+/*   Updated: 2023/09/26 16:48:40 by abaiao-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 Dog::Dog(void)
 {
     this->type = "Dog";
-    this->brain = new Brain();
     std::cout << BLUE << "Dog Default constructor called" << RESET 
         << std::endl;
+    this->brain = new Brain();
 }
 
 Dog::Dog(Dog const &src) : AAnimal(src)
